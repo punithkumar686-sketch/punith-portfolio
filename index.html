@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Punithkumar M Gudisagar | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;background:linear-gradient(135deg,#f5f5dc,#e6d5a8);color:#3b3a30;overflow-x:hidden}
+
+/* Navbar */
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 60px;background:rgba(245,245,220,0.8);position:sticky;top:0;backdrop-filter:blur(10px);z-index:1000}
+nav a{margin:0 15px;color:#556b2f;text-decoration:none;font-weight:500;position:relative}
+nav a::after{content:'';position:absolute;width:0;height:2px;bottom:-4px;left:0;background:#bfa76f;transition:.3s}
+nav a:hover::after{width:100%}
+
+.btn{background:#bfa76f;padding:10px 18px;border-radius:8px;color:#fff;text-decoration:none;font-weight:600;transition:.3s;position:relative;overflow:hidden}
+.btn:hover{transform:scale(1.08);box-shadow:0 10px 25px rgba(191,167,111,0.5)}
+
+/* Ripple effect */
+.btn::after{content:"";position:absolute;width:0;height:0;background:rgba(255,255,255,0.4);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);opacity:0}
+.btn:active::after{width:200px;height:200px;opacity:1;transition:0.4s}
+
+section{padding:80px 100px;opacity:0;transform:translateY(40px);transition:all .8s ease}
+section.show{opacity:1;transform:translateY(0)}
+
+.home{display:flex;justify-content:space-between;align-items:center;gap:40px}
+
+/* Typing animation */
+.typing{border-right:3px solid #556b2f;white-space:nowrap;overflow:hidden;width:0;animation:typing 3s steps(30,end) forwards,blink .7s infinite}
+@keyframes typing{to{width:100%}}
+@keyframes blink{50%{border-color:transparent}}
+
+.hexagon{width:260px;height:260px;clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0% 50%);border:4px solid #556b2f;overflow:hidden;box-shadow:0 0 30px rgba(85,107,47,.3);transition:.4s}
+.hexagon:hover{transform:rotate(4deg) scale(1.08)}
+.hexagon img{width:100%;height:100%;object-fit:cover}
+
+h1{font-size:44px;margin-bottom:10px}
+h2{font-size:30px;margin-bottom:20px}
+.subtitle{color:#6b705c;margin-bottom:20px}
+
+.card{background:rgba(255,248,220,0.7);padding:25px;border-radius:16px;margin-bottom:20px;box-shadow:0 10px 30px rgba(0,0,0,.1);transition:.3s}
+.card:hover{transform:translateY(-8px) scale(1.02)}
+
+.skills-grid,.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+
+/* Scroll progress bar */
+#progress{position:fixed;top:0;left:0;height:4px;background:#bfa76f;width:0%;z-index:2000}
+
+footer{text-align:center;padding:30px;background:rgba(245,245,220,0.8)}
+</style>
+</head>
+
+<body>
+<div id="progress"></div>
+
+<header>
+<h2>Punith Kumar</h2>
+<nav>
+<a href="#home">Home</a>
+<a href="#experience">Experience</a>
+<a href="#skills">Skills</a>
+<a href="#education">Education</a>
+<a href="#contact">Contact</a>
+<a class="btn" href="resume.pdf" target="_blank">Resume</a>
+</nav>
+</header>
+
+<section id="home" class="home">
+<div>
+<h1 class="typing">Punithkumar M Gudisagar</h1>
+<p class="subtitle">Operations & Sales Manager | E-commerce | Process Optimization</p>
+<p>3+ years of experience improving operational efficiency, managing teams, and scaling e-commerce operations.</p>
+<br>
+<a class="btn" href="https://linkedin.com/in/punith-kumar-116992112" target="_blank">LinkedIn</a>
+<a class="btn" href="resume.pdf" target="_blank">Download Resume</a>
+</div>
+
+<div class="hexagon">
+<img src="profile.jpg" alt="Profile">
+</div>
+</section>
+
+<section id="experience">
+<h2>Professional Experience</h2>
+
+<div class="card">
+<h3>Kanasu Infotech</h3>
+<p><strong>Operations & Sales Manager</strong> (Dec 2023 – Present)</p>
+<ul>
+<li>Improved operational efficiency by 40%</li>
+<li>Managed end-to-end e-commerce operations</li>
+<li>Vendor coordination & order fulfillment</li>
+<li>Team leadership & hiring</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Covert Management</h3>
+<p><strong>Document Verifier</strong> (2022 – 2023)</p>
+<ul>
+<li>Verified high-volume financial documents for Tata Capital, IDFC, and Shriram Housing Finance</li>
+<li>Ensured accuracy, compliance, and quality in document processing</li>
+<li>Performed sampling checks to reduce operational errors</li>
+<li>Maintained structured records and updated internal databases</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Professional Aspirant</h3>
+<p><strong>Competitive Exam Preparation (UPSC & KPSC)</strong> (2017 – 2022)</p>
+<ul>
+<li>Prepared for UPSC Engineering Services (Civil) covering core engineering subjects</li>
+<li>Cleared multiple KPSC examinations</li>
+<li>Developed strong analytical thinking, discipline, and time management skills</li>
+</ul>
+</div>
+
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills-grid">
+<div class="card">Operations Management</div>
+<div class="card">E-commerce & Drop Shipping</div>
+<div class="card">CRM & ERP Systems</div>
+<div class="card">Data Analysis</div>
+<div class="card">Team Leadership</div>
+<div class="card">Process Optimization</div>
+</div>
+</section>
+
+<section id="education">
+<h2>Education & More</h2>
+<div class="grid-3">
+<div class="card">
+<h3>Education</h3>
+<p>B.Tech – Civil Engineering</p>
+<p>National Institute of Technology Karnataka</p>
+</div>
+<div class="card">
+<h3>Languages</h3>
+<p>English | Hindi | Kannada</p>
+</div>
+<div class="card">
+<h3>Interests</h3>
+<p>Mythology, Music, Sci-fi, Thriller & Fantasy</p>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<div class="card">
+<p>Email: punithkumarmg94@gmail.com</p>
+<p>Phone: +91 8867039289</p>
+<p>Bengaluru, India</p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Punithkumar M Gudisagar</p>
+</footer>
+
+<script>
+// Scroll reveal
+const sections=document.querySelectorAll("section");
+window.addEventListener("scroll",()=>{
+sections.forEach(sec=>{
+const top=sec.getBoundingClientRect().top;
+if(top<window.innerHeight-100){sec.classList.add("show")}
+})
+})
+
+// Progress bar
+window.onscroll=function(){
+let winScroll=document.body.scrollTop||document.documentElement.scrollTop;
+let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+let scrolled=(winScroll/height)*100;
+document.getElementById("progress").style.width=scrolled+"%";
+}
+</script>
+
+</body>
+</html>

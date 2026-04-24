@@ -50,6 +50,73 @@ h2{font-size:30px;margin-bottom:20px}
 #progress{position:fixed;top:0;left:0;height:4px;background:#bfa76f;width:0%;z-index:2000}
 
 footer{text-align:center;padding:30px;background:rgba(245,245,220,0.8)}
+
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 900px){
+
+header{padding:15px 20px;flex-direction:column;gap:10px}
+
+nav{display:flex;flex-wrap:wrap;justify-content:center}
+nav a{margin:8px}
+
+section{padding:50px 20px}
+
+.home{flex-direction:column;text-align:center}
+
+.hexagon{width:200px;height:200px;margin-top:20px}
+
+h1{font-size:28px}
+h2{font-size:22px}
+
+.card{padding:18px}
+
+.skills-grid,.grid-3{
+grid-template-columns:1fr;
+}
+
+.btn{display:inline-block;margin:5px 5px}
+
+}
+
+@media (max-width: 480px){
+
+h1{font-size:24px}
+.subtitle{font-size:14px}
+
+nav a{font-size:14px}
+
+.btn{padding:8px 14px;font-size:14px}
+
+}
+
+
+
+/* ================= MOBILE + DESKTOP ENHANCED ================= */
+.menu-toggle{display:none;font-size:24px;cursor:pointer}
+
+@media (max-width: 900px){
+header{flex-direction:row;justify-content:space-between;padding:15px 20px}
+.menu-toggle{display:block}
+nav{position:absolute;top:70px;left:0;width:100%;background:rgba(245,245,220,0.95);display:none;flex-direction:column;align-items:center;padding:15px 0}
+nav.active{display:flex}
+nav a{margin:10px 0}
+section{padding:50px 20px}
+.home{flex-direction:column;text-align:center}
+.hexagon{width:200px;height:200px;margin-top:20px}
+h1{font-size:28px}
+h2{font-size:22px}
+.card{padding:18px}
+.skills-grid,.grid-3{grid-template-columns:1fr}
+.btn{display:inline-block;margin:5px}
+}
+
+@media (max-width: 480px){
+h1{font-size:24px}
+.subtitle{font-size:14px}
+.btn{padding:8px 14px;font-size:14px}
+}
+
 </style>
 </head>
 
@@ -58,7 +125,8 @@ footer{text-align:center;padding:30px;background:rgba(245,245,220,0.8)}
 
 <header>
 <h2>Punith Kumar</h2>
-<nav>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<nav id="navMenu">
 <a href="#home">Home</a>
 <a href="#experience">Experience</a>
 <a href="#skills">Skills</a>
@@ -181,6 +249,13 @@ let height=document.documentElement.scrollHeight-document.documentElement.client
 let scrolled=(winScroll/height)*100;
 document.getElementById("progress").style.width=scrolled+"%";
 }
+
+
+function toggleMenu(){
+const menu=document.getElementById('navMenu');
+menu.classList.toggle('active');
+}
+
 </script>
 
 </body>
